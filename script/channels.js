@@ -17,7 +17,7 @@ for( i=0; i<data_channels.length; i++ ){
                 <div>44.5k</div>
                 <div>MAU</div>
             </div>
-            <div>#1</div>
+            <div>#${i+1}</div>
         </div>
 `
 }

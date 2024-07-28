@@ -30,5 +30,4 @@ header.innerHTML = `
                     </svg>
                 </a>
             </div>
-            <!--<div class="panel">панель сортировки</div>-->
 `;
