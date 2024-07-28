@@ -1,10 +1,13 @@
 :root {
     --accent-color: #293A4C;
     --accent-text-color: #8393A3;
+    --background-color: var(--bg-color);
+    --txt-color: var(--txt-color);
     --header-size: 100px;
 }
 
 * {
+    color: var(--txt-color);
     box-sizing: border-box;
     font-family: sans-serif;
     -webkit-user-select: none; /* Chrome/Safari */
@@ -13,11 +16,33 @@
     user-select: none; /* Стандартный синтаксис */
 }
 
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: lightgray;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--accent-text-color);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {}
+
+
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
 }
 
 a {
@@ -89,6 +114,7 @@ main {
 }
 
 .categories {
+    display: block;
     border: 1px solid lightgray;
     border-radius: 8px;
     
@@ -109,6 +135,7 @@ main {
     
     & > div {
         display: grid;
+        grid-gap: 10px 20px;
         text-align: center;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: auto 2fr 1fr 1fr 1fr auto;
@@ -162,6 +189,7 @@ footer {
                 }
                 
                 & .title {
+                    color: lightgray;
                     font-size: 1.4rem;
                     font-weight: bold;
                 }
