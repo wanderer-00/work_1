@@ -6,6 +6,10 @@
 * {
     box-sizing: border-box;
     font-family: sans-serif;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
 }
 
 html,
@@ -32,7 +36,7 @@ footer {
 }
 
 .wrapper {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
