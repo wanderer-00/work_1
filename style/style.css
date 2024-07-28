@@ -1,6 +1,7 @@
 :root {
     --accent-color: #293A4C;
-    --accent-text-color: lightgray;
+    --accent-text-color: #8393A3;
+    --header-size: 100px;
 }
 
 * {
@@ -19,7 +20,10 @@ body {
     padding: 0;
 }
 
-a {text-decoration: none}
+a {
+    color: var(--accent-text-color);
+    text-decoration: none;
+}
 
 header,
 main,
@@ -59,8 +63,17 @@ header {
     & > div {
         display: grid;
         grid-gap: 20px;
-        padding: 20px 0;
-        grid-template-columns: auto 1fr 1fr 1fr 1fr;
+        padding: 12px 0;
+        grid-template-columns: auto 1fr auto auto auto;
+        align-items: center;
+        & a {
+            height: 30px;
+        }
+        
+        & svg {
+            fill: var(--accent-text-color);
+            height: 33px;
+        }
     }
 }
 
@@ -72,7 +85,7 @@ main {
 .categories_cluster {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
 }
 
 .categories {
